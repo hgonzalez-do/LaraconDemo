@@ -2,6 +2,14 @@ spec:
   alerts:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
+  databases:
+  - cluster_name: laracon-mysql-db
+    db_name: defaultdb
+    db_user: doadmin
+    engine: MYSQL
+    name: laracon-mysql-db
+    production: true
+    version: "8"
   envs:
   - key: global_test
     scope: RUN_AND_BUILD_TIME
@@ -33,6 +41,9 @@ spec:
       value: ${APP_URL}
     - key: LOG_CHANNEL
       value: "stack"
+    - key: DATABASE_URL
+      scope: RUN_TIME
+      value: ${laracon-mysql-db.DATABASE_URL}
     github:
       branch: main
       deploy_on_push: true
