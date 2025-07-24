@@ -1,25 +1,43 @@
 spec:
+  alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+  envs:
+  - key: global_test
+    scope: RUN_AND_BUILD_TIME
+    value: global_value
+  features:
+  - buildpack-stack=ubuntu-22
+  ingress:
+    rules:
+    - component:
+        name: laracon-web
+      match:
+        authority:
+          exact: ""
+        path:
+          prefix: /
   name: laracon-example
+  region: nyc
   services:
-    - environment_slug: php
-      name: laracon-web
-      git:
-        branch: main
-        deploy_on_push: true
-        repo_clone_url: https://github.com/hgonzalez-do/LaraconDemo.git
-      build_command: npm install && npm run build
-      run_command: |
-        php artisan migrate --force
-        php artisan config:cache
-        php artisan route:cache
-        php artisan view:cache
-        heroku-php-apache2 public/
-      envs:
-        - key: APP_NAME
-          value: Laracon
-        - key: APP_ENV
-          value: production
-        - key: APP_DEBUG
-          value: "false"
-        - key: APP_URL
-          value: ${APP_URL}
+  - build_command: npm run build
+    environment_slug: php
+    envs:
+    - key: test
+      scope: RUN_AND_BUILD_TIME
+      value: value
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: hgonzalez-do/LaraconDemo
+    http_port: 8080
+    instance_count: 2
+    instance_size_slug: apps-s-1vcpu-1gb
+    name: laracon-web
+    run_command: |-
+      php artisan migrate --force
+      php artisan config:cache
+      php artisan route:cache
+      php artisan view:cache
+      heroku-php-apache2 public/
+    source_dir: /
