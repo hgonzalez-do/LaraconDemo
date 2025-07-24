@@ -65,12 +65,12 @@ spec:
       - key: REDIS_PORT
         scope: RUN_TIME
         value: ${laracon-valkey-db.PORT}
-      databases:
-      - engine: PG
-        name: laracon-pg-db
-        version: "17"
-        production: true
-      - engine: VALKEY
-        name: laracon-valkey-db
-        version: "8"
-        production: true
+  databases:
+  - engine: PG
+    name: laracon-pg-db
+    version: "17"
+    production: true
+  - engine: VALKEY
+    name: laracon-valkey-db
+    version: "8"
+    production: true
