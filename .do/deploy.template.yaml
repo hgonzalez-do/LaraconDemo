@@ -8,7 +8,7 @@ spec:
     db_user: doadmin
     engine: MYSQL
     name: laracon-mysql-db
-    production: true
+    production: "false"
     version: "8"
   envs:
   - key: global_test
