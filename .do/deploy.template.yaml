@@ -26,6 +26,13 @@ spec:
     - key: APP_NAME
       scope: RUN_AND_BUILD_TIME
       value: Laracon
+    - key: APP_ENV
+      value: production
+    - key: APP_DEBUG
+      scope: RUN_AND_BUILD_TIME
+      value: "false"
+    - key: APP_URL
+      value: ${APP_URL}
     github:
       branch: main
       deploy_on_push: true
