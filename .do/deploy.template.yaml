@@ -15,62 +15,44 @@ spec:
         php artisan view:cache
         heroku-php-apache2 public/
       envs:
-      - key: APP_NAME
-        scope: RUN_TIME
-        value:  Laracon
-      - key: APP_ENV
-        scope: RUN_TIME
-        value: production
-      - key: APP_DEBUG
-        scope: RUN_TIME
-        value: "false"
-      - key: APP_URL
-        scope: RUN_TIME
-        value: ${APP_URL}
-      # LOG
-      - key: LOG_CHANNEL
-        scope: RUN_TIME
-        value: "stack"
-      - key: LOG_LEVEL
-        scope: RUN_TIME
-        value: "debug"
-      # DATABASE
-      - key: DB_CONNECTION
-        scope: RUN_TIME
-        value: "pgsql"
-      - key: DB_HOST
-        scope: RUN_TIME
-        value: ${laracon-pg-db.HOSTNAME}
-      - key: DB_PORT
-        scope: RUN_TIME
-        value: ${laracon-pg-db.PORT}
-      - key: DB_DATABASE
-        scope: RUN_TIME
-        value: ${laracon-pg-db.DATABASE}
-      - key: DB_USERNAME
-        scope: RUN_TIME
-        value: ${laracon-pg-db.USERNAME}
-        type: SECRET
-      - key: DB_PASSWORD
-        scope: RUN_TIME
-        value: ${laracon-pg-db.PASSWORD}
-        type: SECRET
-      # REDIS
-      - key: REDIS_HOST
-        scope: RUN_TIME
-        value: ${laracon-valkey-db.HOSTNAME}
-      - key: REDIS_PASSWORD
-        scope: RUN_TIME
-        value: ${laracon-valkey-db.PASSWORD}
-      - key: REDIS_PORT
-        scope: RUN_TIME
-        value: ${laracon-valkey-db.PORT}
+        - key: APP_NAME
+          value: Laracon
+        - key: APP_ENV
+          value: production
+        - key: APP_DEBUG
+          value: "false"
+        - key: APP_URL
+          value: ${APP_URL}
+        - key: LOG_CHANNEL
+          value: "stack"
+        - key: LOG_LEVEL
+          value: "debug"
+        - key: DB_CONNECTION
+          value: "pgsql"
+        - key: DB_HOST
+          value: ${laracon-pg-db.HOSTNAME}
+        - key: DB_PORT
+          value: ${laracon-pg-db.PORT}
+        - key: DB_DATABASE
+          value: ${laracon-pg-db.DATABASE}
+        - key: DB_USERNAME
+          value: ${laracon-pg-db.USERNAME}
+          type: SECRET
+        - key: DB_PASSWORD
+          value: ${laracon-pg-db.PASSWORD}
+          type: SECRET
+        - key: REDIS_HOST
+          value: ${laracon-valkey-db.HOSTNAME}
+        - key: REDIS_PASSWORD
+          value: ${laracon-valkey-db.PASSWORD}
+        - key: REDIS_PORT
+          value: ${laracon-valkey-db.PORT}
   databases:
-  - engine: PG
-    name: laracon-pg-db
-    version: "17"
-    production: true
-  - engine: VALKEY
-    name: laracon-valkey-db
-    version: "8"
-    production: true
+    - engine: PG
+      name: laracon-pg-db
+      version: "17"
+      production: true
+    - engine: VALKEY
+      name: laracon-valkey-db
+      version: "8"
+      production: true
