@@ -1,4 +1,38 @@
 spec:
+  name: laracon-example
+  region: nyc
+  services:
+  - build_command: npm run build
+    environment_slug: php
+    envs:    
+    - key: APP_NAME
+      scope: RUN_AND_BUILD_TIME
+      value: Laracon
+    - key: APP_ENV
+      value: production
+    - key: APP_DEBUG
+      value: "false"
+    - key: APP_URL
+      value: ${APP_URL}
+    - key: LOG_CHANNEL
+      value: "stack"
+    - key: LOG_LEVEL
+      value: "debug"
+    github:
+      branch: main
+      deploy_on_push: true
+      repo_clone_url: https://github.com/hgonzalez-do/LaraconDemo.git
+    http_port: 8080
+    instance_count: 2
+    instance_size_slug: apps-s-1vcpu-1gb
+    name: laracon-web
+    run_command: |-
+      php artisan migrate --force
+      php artisan config:cache
+      php artisan route:cache
+      php artisan view:cache
+      heroku-php-apache2 public/
+    source_dir: /
   alerts:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
@@ -17,27 +51,3 @@ spec:
           exact: ""
         path:
           prefix: /
-  name: laracon-example
-  region: nyc
-  services:
-  - build_command: npm run build
-    environment_slug: php
-    envs:
-    - key: test
-      scope: RUN_AND_BUILD_TIME
-      value: value
-    github:
-      branch: main
-      deploy_on_push: true
-      repo: hgonzalez-do/LaraconDemo
-    http_port: 8080
-    instance_count: 2
-    instance_size_slug: apps-s-1vcpu-1gb
-    name: laracon-web
-    run_command: |-
-      php artisan migrate --force
-      php artisan config:cache
-      php artisan route:cache
-      php artisan view:cache
-      heroku-php-apache2 public/
-    source_dir: /
