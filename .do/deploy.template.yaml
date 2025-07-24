@@ -48,3 +48,8 @@ spec:
       php artisan view:cache
       heroku-php-apache2 public/
     source_dir: /
+  databases:
+    - engine: PG
+      name: laracon-pg-db
+      version: "17"
+      production: true
