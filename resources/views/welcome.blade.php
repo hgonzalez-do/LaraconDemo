@@ -7,7 +7,7 @@
                 <div class="text-[17px] leading-[20px] flex-1 p-6 pb-6 lg:p-10 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
                     <h1 class="mb-1 font-medium">Looking to streamline your deployment?</h1>
                     <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">DigitalOcean lets you skip the infrastructure hassle and focus on building great apps.</p>
-                    <ul class="flex flex-col mb-4 lg:mb-6">
+                    <ul class="flex flex-col">
                         <li class="flex items-center gap-4 py-2 relative">
                             <span class="relative py-1 bg-white dark:bg-[#161615]">
                                 <span class="flex items-center justify-center rounded-full bg-[#FDFDFC] dark:bg-[#161615] shadow-[0px_0px_1px_0px_rgba(0,0,0,0.03),0px_1px_2px_0px_rgba(0,0,0,0.06)] w-3.5 h-3.5 border dark:border-[#3E3E3A] border-[#e3e3e0]">
@@ -42,9 +42,9 @@
                                 </span>
                             </span>
                             <span>
-                                Scalable database infrastructure made simple with
+                                Scalable databases made simple with managed
                                 <a href="https://docs.digitalocean.com/products/databases/postgresql/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
-                                    <span>Managed PostgreSQL</span>
+                                    <span>PostgreSQL</span>
                                     <svg
                                         width="10"
                                         height="11"
@@ -59,19 +59,8 @@
                                             stroke-linecap="square"
                                         />
                                     </svg>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="flex items-center gap-4 py-2 relative">
-                            <span class="relative py-1 bg-white dark:bg-[#161615]">
-                                <span class="flex items-center justify-center rounded-full bg-[#FDFDFC] dark:bg-[#161615] shadow-[0px_0px_1px_0px_rgba(0,0,0,0.03),0px_1px_2px_0px_rgba(0,0,0,0.06)] w-3.5 h-3.5 border dark:border-[#3E3E3A] border-[#e3e3e0]">
-                                    <span class="rounded-full bg-[#dbdbd7] dark:bg-[#3E3E3A] w-1.5 h-1.5"></span>
-                                </span>
-                            </span>
-                            <span>
-                                Effortless caching with
-                                <a href="https://docs.digitalocean.com/products/databases/redis/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
-                                    <span>Managed Valkey</span>
+                                </a> and <a href="https://docs.digitalocean.com/products/databases/redis/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
+                                    <span>Valkey</span>
                                     <svg
                                         width="10"
                                         height="11"
