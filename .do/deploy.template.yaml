@@ -3,20 +3,17 @@ spec:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
   databases:
-  - cluster_name: laracon-pg-db
-    db_name: defaultdb
+  - name: laracon-pg-db
+    db_name: laracon
     db_user: doadmin
     engine: PG
-    name: laracon-pg-db
     production: true
     version: "17"
-  - cluster_name: laracon-valkey-db
-    db_name: defaultdb
-    db_user: doadmin
+  - name: laracon-valkey-db
+    db_user: default
     engine: VALKEY
-    name: laracon-valkey-db
     production: true
-    version: "17"
+    version: "8"
   envs:
   - key: global_test
     scope: RUN_AND_BUILD_TIME
