@@ -8,8 +8,8 @@ spec:
     version: "17"
     production: true
     cluster_name: "laracon-pg-db"
-    db_name: "laracon"
-    db_user: "laracon"
+    db_name: "defaultdb"
+    db_user: "doadmin"
   - name: laracon-valkey-db
     engine: VALKEY
     production: true
