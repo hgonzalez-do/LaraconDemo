@@ -70,7 +70,7 @@ nav {
                 <a href="{{ url('/spaces') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
                 <a href="{{ url('/postgres') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Valkey"><span>Postgress</span></a>
                 <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg" alt="Valkey"><span>Valkey</span></a>
-                <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>GradientAI</span></a>
+                <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>Gradient</span></a>
             </div>
             <!-- Mobile menu button -->
             <div class="md:hidden flex items-center">
@@ -90,7 +90,7 @@ nav {
         <a href="{{ url('/spaces') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
         <a href="{{ url('/postgres') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Spaces"><span>Postgress</span></a>
         <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg" alt="Valkey"><span>Valkey</span></a>
-        <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>GradientAI</span></a>
+        <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>Gradient</span></a>
     </div>
     <script>
         document.getElementById('mobile-menu-button').onclick = function() {
