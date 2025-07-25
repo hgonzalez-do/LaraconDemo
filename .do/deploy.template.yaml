@@ -66,10 +66,8 @@ spec:
       type: SECRET
     - key: REDIS_CLIENT
       value: "phpredis"
-    - key: REDIS_HOST
-      value: ${laracon-valkey-db.HOSTNAME}
-    - key: REDIS_PORT
-      value: ${laracon-valkey-db.PORT}
+    - key: REDIS_URL
+      value: ${laracon-valkey-db.URL}
     github:
       branch: main
       deploy_on_push: true
