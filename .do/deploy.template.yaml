@@ -33,7 +33,13 @@ spec:
   name: laracon-example
   region: nyc
   services:
-  - build_command: npm install && npm run build
+  - autoscaling:
+      max_instance_count: 4
+      metrics:
+        cpu:
+          percent: 70
+      min_instance_count: 1
+    build_command: npm install && npm run build
     environment_slug: php
     envs:
     - key: APP_NAME
@@ -70,7 +76,7 @@ spec:
       repo: hgonzalez-do/LaraconDemo
     http_port: 8080
     instance_count: 2
-    instance_size_slug: apps-s-1vcpu-1gb
+    instance_size_slug: apps-d-1vcpu-1gb
     name: laracon-web
     run_command: |-
       php artisan migrate --force
