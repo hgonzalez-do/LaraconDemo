@@ -33,7 +33,7 @@ spec:
   name: laracon-example
   region: nyc
   services:
-  - autoscaling:
+  - autoscale:
       max_instance_count: 4
       metrics:
         cpu:
