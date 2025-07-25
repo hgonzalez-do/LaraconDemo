@@ -68,6 +68,7 @@ spec:
       value: "phpredis"
     - key: REDIS_URL
       value: ${laracon-valkey-db.URL}
+      type: SECRET
     github:
       branch: main
       deploy_on_push: true
