@@ -3,10 +3,10 @@
 <x-top-menu />
 
 <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <div class="text-[18px] leading-[20px] flex-1 p-6 pb-6 lg:p-10 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <h1 class="mb-1 font-medium">Looking to streamline your Laravel deployment?</h1>
-                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]"> DigitalOcean App Platform offers a fully managed solution that takes the hassle out of infrastructure, so you can focus on building great apps.</p>
+            <main class="flex w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
+                <div class="text-[17px] leading-[20px] flex-1 p-6 pb-6 lg:p-10 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
+                    <h1 class="mb-1 font-medium">Looking to streamline your deployment?</h1>
+                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">DigitalOcean lets you skip the infrastructure hassle and focus on building great apps.</p>
                     <ul class="flex flex-col mb-4 lg:mb-6">
                         <li class="flex items-center gap-4 py-2 relative">
                             <span class="relative py-1 bg-white dark:bg-[#161615]">
@@ -16,7 +16,7 @@
                             </span>
                             <span>
                                 Serverless deployment with 
-                                <a href="https://cloud.digitalocean.com/apps" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
+                                <a href="https://docs.digitalocean.com/products/app-platform/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
                                     <span>AppPlatform</span>
                                     <svg
                                         width="10"
@@ -42,9 +42,9 @@
                                 </span>
                             </span>
                             <span>
-                                Simple Valkey Caching
-                                <a href="https://laravel.com/docs" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Documentation</span>
+                                Scalable database infrastructure made simple with
+                                <a href="https://docs.digitalocean.com/products/databases/postgresql/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
+                                    <span>Managed PostgreSQL</span>
                                     <svg
                                         width="10"
                                         height="11"
@@ -69,9 +69,9 @@
                                 </span>
                             </span>
                             <span>
-                                Easy Object Storage Integraiton with
-                                <a href="https://laracasts.com" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Spaces</span>
+                                Effortless caching with
+                                <a href="https://docs.digitalocean.com/products/databases/redis/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
+                                    <span>Managed Valkey</span>
                                     <svg
                                         width="10"
                                         height="11"
@@ -96,8 +96,8 @@
                                 </span>
                             </span>
                             <span>
-                                Easy Object Storage Integraiton with
-                                <a href="https://laracasts.com" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
+                                Seamless object storage with
+                                <a href="https://docs.digitalocean.com/products/spaces/" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#0061eb] dark:text-[#FF4433] ml-1">
                                     <span>Spaces</span>
                                     <svg
                                         width="10"
@@ -115,13 +115,6 @@
                                     </svg>
                                 </a>
                             </span>
-                        </li>
-                    </ul>
-                    <ul class="flex gap-3 text-sm leading-normal">
-                        <li>
-                            <a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/hgonzalez-do/laracondemo/tree/main">
- <img src="https://www.deploytodo.com/do-btn-blue.svg" alt="Deploy to DO">
-</a>
                         </li>
                     </ul>
                 </div>

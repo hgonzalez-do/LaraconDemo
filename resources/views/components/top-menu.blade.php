@@ -52,8 +52,9 @@ nav {
             </div>
             <!-- Menu Links -->
             <div class="hidden md:flex space-x-8">
-                <a href="{{ url('/') }}">Home</a>
+                <a href="{{ url('/') }}">Laracon 2025</a>
                 <a href="{{ url('/spaces') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
+                <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Valkey"><span>Postgress</span></a>
                 <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg" alt="Valkey"><span>Valkey</span></a>
             </div>
             <!-- Mobile menu button -->
