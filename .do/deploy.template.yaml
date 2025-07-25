@@ -10,11 +10,6 @@ spec:
     cluster_name: "laracon-pg-db"
     db_name: "defaultdb"
     db_user: "doadmin"
-  - cluster_name: laracon-valkey-db
-    engine: VALKEY
-    name: laracon-valkey-db
-    production: true
-    version: "8"
   envs:
   - key: global_var
     scope: RUN_AND_BUILD_TIME
