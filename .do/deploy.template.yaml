@@ -5,12 +5,11 @@ spec:
   databases:
   - name: laracon-pg-db
     db_name: laracon
-    db_user: doadmin
+    db_user: laracon
     engine: PG
     production: true
     version: "17"
   - name: laracon-valkey-db
-    db_user: default
     engine: VALKEY
     production: true
     version: "8"
