@@ -32,7 +32,7 @@ spec:
   name: laracon-example
   region: nyc
   services:
-  - build_command: npm run build
+  - build_command: npm install && npm run build
     environment_slug: php
     envs:
     - key: APP_NAME
