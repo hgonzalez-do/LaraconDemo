@@ -19,9 +19,7 @@
   data-agent-id="0eca88f9-6963-11f0-bf8f-4e013e2ddde4"
   data-chatbot-id="u5dIFlBVgjRxBeo7L7ieTcxA1NQufBrR"
   data-name="Laracon 2025 Chatbot"
-  data-primary-color="#031B4E"
-  data-secondary-color="#E5E8ED"
-  data-button-background-color="#0061EB"
+  data-primary-color="#0069ff" data-secondary-color="#E5E8ED" data-button-background-color="#0061EB"
   data-starting-message="Hi there! Welcome to the DigitalOcean booth at Laracon 2025 — how can I assist you today?"
   data-logo="/static/chatbot/icons/default-agent.svg">
 </script>

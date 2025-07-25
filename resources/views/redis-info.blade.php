@@ -2,13 +2,8 @@
        
 <x-top-menu />
 
-<div class="max-w-6xl mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-6">Valkey Database Details</h1>
-    <div class="mb-2">
-                    <h3 class="text-base font-medium">Connection Status</h3>
-                    <p>Status: <span class="font-bold">{{ $redisConnected ? 'Connected' : 'Unable to connect to Valkey. Check your configuration.' }}</span></p>
-                    <p>Ping Response: <span class="font-mono">{{ $redisPing }}</span></p>
-                </div>
+<div class="max-w-6xl mx-auto ">
+    <h1 class="text-2xl font-bold mb-6">Valkey Deployment Details</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {{-- General Info --}}

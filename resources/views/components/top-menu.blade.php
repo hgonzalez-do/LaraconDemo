@@ -68,7 +68,7 @@ nav {
             <div class="hidden md:flex space-x-8">
                 
                 <a href="{{ url('/spaces') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
-                <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Valkey"><span>Postgress</span></a>
+                <a href="{{ url('/postgres') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Valkey"><span>Postgress</span></a>
                 <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg" alt="Valkey"><span>Valkey</span></a>
                 <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>GradientAI</span></a>
             </div>
@@ -88,7 +88,7 @@ nav {
     <div id="mobile-menu" class="md:hidden hidden px-20 bg-white">
         <a href="{{ url('/') }}">Home</a>
         <a href="{{ url('/spaces') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
-        <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Spaces"><span>Postgress</span></a>
+        <a href="{{ url('/postgres') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/postgresql.svg" alt="Spaces"><span>Postgress</span></a>
         <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg" alt="Valkey"><span>Valkey</span></a>
         <a href="{{ url('/') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg" alt="Valkey"><span>GradientAI</span></a>
     </div>
