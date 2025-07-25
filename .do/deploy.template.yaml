@@ -41,8 +41,6 @@ spec:
       value: production
     - key: APP_DEBUG
       value: "false"
-    - key: APP_URL
-      value: ${APP_URL}
     - key: LOG_CHANNEL
       value: "stack"
     - key: DB_CONNECTION
