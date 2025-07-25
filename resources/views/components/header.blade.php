@@ -33,5 +33,8 @@
         <meta name="author" content="DigitalOcean">
         <meta property="og:title" content="Laracon 2025">
         <meta property="og:description" content="Join us at Laracon 2025 for an exciting conference on Laravel and PHP development.">
+
+
+    @stack('styles')
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
