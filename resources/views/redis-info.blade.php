@@ -1,52 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Redis Configuration</title>
+<x-header />
+       
+<x-top-menu />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
-    <!-- Styles / Scripts -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        <!-- Tailwind CSS Inline Fallback (shortened for clarity in this example) -->
-        <style>
-            body { font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; }
-            /* Place other needed fallback styles here if required */
-        </style>
-    @endif
-</head>
-<body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-
-    {{-- Header/Login Nav --}}
-    <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6">
-        @if (Route::has('login'))
-            <nav class="flex items-center justify-end gap-4">
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="inline-block px-5 py-1.5 border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] rounded-sm text-sm leading-normal hover:border-[#1915014a] dark:hover:border-[#62605b]">
-                        Dashboard
-                    </a>
-                @else
-                    <a href="{{ route('login') }}" class="inline-block px-5 py-1.5 text-[#1b1b18] dark:text-[#EDEDEC] border border-transparent rounded-sm text-sm leading-normal hover:border-[#19140035] dark:hover:border-[#3E3E3A]">
-                        Log in
-                    </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="inline-block px-5 py-1.5 text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] border rounded-sm text-sm leading-normal hover:border-[#1915014a] dark:hover:border-[#62605b]">
-                            Register
-                        </a>
-                    @endif
-                @endauth
-            </nav>
-        @endif
-    </header>
-
-    {{-- Main Content --}}
-    <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow">
-        <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
 
             {{-- Welcome / Docs Panel --}}
             <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
@@ -98,9 +53,9 @@
                 </ul>
             </div>
 
-            {{-- Redis Status Panel --}}
+            {{-- Valkey Status Panel --}}
             <div class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden p-6 flex flex-col">
-                <h2 class="text-lg font-semibold mb-2">Redis Configuration</h2>
+                <h2 class="text-lg font-semibold mb-2">Valkey Configuration</h2>
 
                 <div class="mb-2">
                     <h3 class="text-base font-medium">Connection Status</h3>
@@ -110,23 +65,16 @@
 
                 @if($redisConnected)
                     <div>
-                        <h4 class="text-base font-medium mt-4 mb-1">Redis Server Info</h4>
+                        <h4 class="text-base font-medium mt-4 mb-1">Valkey Server Info</h4>
                         <pre class="bg-[#FDFDFC] dark:bg-[#161615] rounded border border-[#e3e3e0] dark:border-[#3E3E3A] p-2 overflow-x-auto text-xs">{{ print_r($redisInfo, true) }}</pre>
                     </div>
                 @else
                     <div class="mt-4 text-[#F53003] dark:text-[#FF4433] font-semibold">
-                        Unable to connect to Redis. Check your configuration.
+                        Unable to connect to Valkey. Check your configuration.
                     </div>
                 @endif
 
                 <div class="absolute inset-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg pointer-events-none shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"></div>
             </div>
-        </main>
-    </div>
 
-    @if (Route::has('login'))
-        <div class="h-14.5 hidden lg:block"></div>
-    @endif
-
-</body>
-</html>
+<x-footer />
