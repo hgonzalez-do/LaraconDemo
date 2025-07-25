@@ -10,6 +10,11 @@ spec:
     cluster_name: "laracon-pg-db"
     db_name: "defaultdb"
     db_user: "doadmin"
+  - cluster_name: laracon-valkey-db
+    engine: VALKEY
+    name: laracon-valkey-db
+    production: true
+    version: "8"
   envs:
   - key: global_var
     scope: RUN_AND_BUILD_TIME
@@ -71,7 +76,7 @@ spec:
       repo: hgonzalez-do/LaraconDemo
     http_port: 8080
     instance_count: 2
-    instance_size_slug: apps-d-1vcpu-1gb
+    instance_size_slug: apps--1vcpu-1gb
     name: laracon-web
     run_command: |-
       php artisan migrate --force
