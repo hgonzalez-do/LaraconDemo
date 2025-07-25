@@ -25,6 +25,7 @@ class RedisInfoController extends Controller
         return view('redis-info', [
             'redisConfig' => $redisConfig,
             'redisInfo' => $redisInfo,
+            'info' => $redisInfo,
             'redisPing' => $redisPing,
             'redisConnected' => $redisConnected,
         ]);
