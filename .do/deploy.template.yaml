@@ -3,12 +3,13 @@ spec:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
   databases:
-  - name: laracon-pg-db
-    db_name: laracon
-    db_user: laracon
-    engine: PG
-    production: true
+  - name: "laracon-pg-db"
+    engine: "PG"
     version: "17"
+    production: true
+    cluster_name: "laracon-pg-db"
+    db_name: "laracon"
+    db_user: "laracon"
   envs:
   - key: global_var
     scope: RUN_AND_BUILD_TIME
