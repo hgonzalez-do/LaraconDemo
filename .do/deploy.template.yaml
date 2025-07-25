@@ -14,7 +14,7 @@ spec:
     production: true
     version: "8"
   envs:
-  - key: global_test
+  - key: global_var
     scope: RUN_AND_BUILD_TIME
     value: global_value
   features:
@@ -60,8 +60,6 @@ spec:
       type: SECRET
     - key: REDIS_HOST
       value: ${laracon-valkey-db.HOSTNAME}
-    - key: REDIS_PASSWORD
-      value: ${laracon-valkey-db.PASSWORD}
     - key: REDIS_PORT
       value: ${laracon-valkey-db.PORT}
     github:
