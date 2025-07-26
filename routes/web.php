@@ -13,3 +13,6 @@ Route::get('/postgres', [PGInfoController::class, 'index']);
 Route::get('/spaces', [SpacesController::class, 'index'])->name('spaces.index');
 Route::get('/spaces', [SpacesController::class, 'index'])->name('s3.browser');
 Route::get('/spaces/download', [SpacesController::class, 'download'])->name('s3.download');
+Route::post('/spaces/upload', [SpacesController::class, 'upload'])->name('s3.upload');
+Route::post('/spaces/create-folder', [SpacesController::class, 'createFolder'])->name('s3.create-folder');
+Route::delete('/spaces/delete', [SpacesController::class, 'delete'])->name('s3.delete');
