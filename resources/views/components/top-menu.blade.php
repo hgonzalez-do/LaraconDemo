@@ -93,9 +93,9 @@
                 <a href="{{ url('/spaces') }}"><img class="card-icon"
                         src="https://docs.digitalocean.com/images/icons/spaces.svg"
                         alt="Spaces"><span>Spaces</span></a>
-                <a href="{{ url('/postgres') }}"><img class="card-icon"
+                <a href="{{ url('/database/tables') }}"><img class="card-icon"
                         src="https://docs.digitalocean.com/images/icons/postgresql.svg"
-                        alt="Valkey"><span>Postgres</span></a>
+                        alt="Valkey"><span>PostgreSQL</span></a>
                 <a href="{{ url('/redis') }}"><img class="card-icon"
                         src="https://docs.digitalocean.com/images/icons/redis.svg"
                         alt="Valkey"><span>Valkey</span></a>
@@ -118,9 +118,9 @@
         <a href="{{ url('/') }}">Home</a>
         <a href="{{ url('/spaces') }}"><img class="card-icon"
                 src="https://docs.digitalocean.com/images/icons/spaces.svg" alt="Spaces"><span>Spaces</span></a>
-        <a href="{{ url('/postgres') }}"><img class="card-icon"
+        <a href="{{ url('/database/tables') }}"><img class="card-icon"
                 src="https://docs.digitalocean.com/images/icons/postgresql.svg"
-                alt="Spaces"><span>Postgres</span></a>
+                alt="Spaces"><span>PostgreSQL</span></a>
         <a href="{{ url('/redis') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/redis.svg"
                 alt="Valkey"><span>Valkey</span></a>
         <a href="{{ url('/gradient') }}"><img class="card-icon" src="https://docs.digitalocean.com/images/icons/ml.svg"

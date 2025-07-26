@@ -32,7 +32,7 @@ class SpacesController extends Controller
                         'path' => $object['path'],
                         'size' => $this->formatBytes($object['size'] ?? 0),
                         'last_modified' => isset($object['lastModified']) 
-                            ? $object['lastModified'] 
+                            ? date('Y-m-d H:i:s', $object['lastModified']) 
                             : 'Unknown',
                         'url' => Storage::disk('spaces')->url($object['path'])
                     ];
